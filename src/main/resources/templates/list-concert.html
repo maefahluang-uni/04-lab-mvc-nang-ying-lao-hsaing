@@ -9,7 +9,16 @@
     <h1>Concert List</h1>
     <a href="/add-concert/">Add Concert</a>
     <!-- TODO: show delete link for each concert -->
-
+    <ul>
+        <li th:each="con : ${concerts}">
+            <a  th:href="@{/delete-concert/{id}(id=${con.id})}">Delete</a>
+            <span th:text="${con.id}"></span> 
+            <span th:text="${con.title}"></span> 
+            <span th:text="${con.performer}"></span>
+            <span th:text="${con.date}"></span>
+            <span th:text="${con.description}"></span>
+        </li>
+    </ul>
     <!-- TODO: Add list of concerts -->
 </body>
 </html>
