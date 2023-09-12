@@ -70,6 +70,7 @@ public class ConcertController {
     public String removeAllConcerts() {
         //TODO: clear all employees and reset id
         concerts.clear();
+        nextid =1;
         // TODO: redirect to list concerts
         return "redirect:/concerts";
     }
